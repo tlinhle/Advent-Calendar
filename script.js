@@ -16,7 +16,6 @@ function fadeOut(event){
 	}, delayInMilliseconds);
 }
 
-/*
 // hides sections  
 const section = document.querySelectorAll('section');
 for(let i = 0; i < section.length; i++){
@@ -30,7 +29,7 @@ for(let i = 0; i < section.length; i++){
 	
 	const span = section[i].querySelector('span');
 	hideElement(span);
-}*/
+}
 
 function hideElement(element){
 	// if the element is found
