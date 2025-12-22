@@ -46,8 +46,6 @@ header h1, .box{
 	position: absolute;
 	font-size: 50px;
 	transition: all 0.2s ease;
-	
-	display: none;
 }
 .box:hover, #kissImage:hover, #phone:hover{
 	cursor: pointer;
