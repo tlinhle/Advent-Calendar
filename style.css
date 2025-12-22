@@ -1,0 +1,82 @@
+body{
+	background-color: #ebe9e1;
+	flex-direction: column;
+}
+body, section, .box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header{
+	text-align: center;
+}
+header h1{
+	font-size: 60px;
+	margin:0;
+}
+main{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+section, .box{
+	font-weight: bold;
+	color: white;
+	border-radius: 15px;
+	width: 180px;
+	height: 180px;
+	padding: 25px;
+	margin: 25px;
+}
+p, section{
+	font-family: Arial, Helvetica, sans-serif;
+}
+section{
+	font-size: 15px;
+	background-color: #6a994e;
+	position: relative;
+	flex-direction: column;
+}
+header h1, .box{
+	font-family: "Nanum Pen Script", cursive;
+	font-style: normal;
+}
+.box{
+	background-color: #e43d12;
+	position: absolute;
+	font-size: 50px;
+	transition: all 0.2s ease;
+	
+	display: none;
+}
+.box:hover, #kissImage:hover, #phone:hover{
+	cursor: pointer;
+}
+.box:hover{
+	background-color: #780000;
+}
+#kissImage:hover, #coupon:hover{
+	transform: scale(1.05);
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+.fade{
+	opacity: 0;
+}
+.hidden{
+	display: none;
+}
+.ringing{
+	transform: rotate(5deg);
+}
+.spinning{
+	transform: rotate(180deg);
+}
+span.highlight{
+	padding: 0 20px;
+	border-radius: 5px;
+	background-color: white;
+	color: #e43d12;
+}
