@@ -46,8 +46,6 @@ header h1, .box{
 	position: absolute;
 	font-size: 50px;
 	transition: all 0.2s ease;
-	
-	display: none;
 }
 .box:hover, #kissImage:hover, #phone:hover, summary:hover, #musicNote:hover{
 	cursor: pointer;
@@ -80,6 +78,7 @@ span.highlight{
 	background-color: white;
 	color: #e43d12;
 }
+<<<<<<< HEAD
 a{
 	color: #ebe9e1;
 	text-decoration: none;
@@ -95,3 +94,5 @@ img{
 #musicNote{
 	border-radius: 5px;
 }
+=======
+>>>>>>> b2d6e1f87e6455df45fbf1d941651079d69c0d9d

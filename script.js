@@ -16,17 +16,28 @@ function fadeOut(event){
 	}, delayInMilliseconds);
 }
 
-/*
 // hides sections  
 const section = document.querySelectorAll('section');
 for(let i = 0; i < section.length; i++){
 	section[i].querySelector('p').textContent = 'no peeking!';
 	
+<<<<<<< HEAD
 	hideElement(section[i].querySelector('img'));
 	hideElement(section[i].querySelector('ul'));
 	hideElement(section[i].querySelector('span'));
 	hideElement(section[i].querySelector('details'));
 }*/
+=======
+	const img = section[i].querySelector('img');
+	hideElement(img);
+	
+	const ul = section[i].querySelector('ul');
+	hideElement(ul);
+	
+	const span = section[i].querySelector('span');
+	hideElement(span);
+}
+>>>>>>> b2d6e1f87e6455df45fbf1d941651079d69c0d9d
 
 function hideElement(element){
 	// if the element is found
@@ -78,6 +89,7 @@ function spinDisc(){
 }
 
 setInterval(spinDisc, 700);
+<<<<<<< HEAD
 
 function toggleSound(audio){
 	if(audio.paused){
@@ -103,3 +115,5 @@ function liminal(){
 	
 	toggleSound(liminalAudio);
 }
+=======
+>>>>>>> b2d6e1f87e6455df45fbf1d941651079d69c0d9d
