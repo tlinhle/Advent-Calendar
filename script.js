@@ -22,14 +22,10 @@ const section = document.querySelectorAll('section');
 for(let i = 0; i < section.length; i++){
 	section[i].querySelector('p').textContent = 'no peeking!';
 	
-	const img = section[i].querySelector('img');
-	hideElement(img);
-	
-	const ul = section[i].querySelector('ul');
-	hideElement(ul);
-	
-	const span = section[i].querySelector('span');
-	hideElement(span);
+	hideElement(section[i].querySelector('img'));
+	hideElement(section[i].querySelector('ul'));
+	hideElement(section[i].querySelector('span'));
+	hideElement(section[i].querySelector('details'));
 }*/
 
 function hideElement(element){
@@ -82,3 +78,28 @@ function spinDisc(){
 }
 
 setInterval(spinDisc, 700);
+
+function toggleSound(audio){
+	if(audio.paused){
+		audio.play();
+	} else {
+		audio.pause();
+	}
+}
+
+// change to liminal (img and audio) when image is clicked
+const musicImg = document.getElementById('musicNote');
+musicImg.addEventListener('click', liminal);
+
+const liminalAudio = new Audio('assets/piano.wav');
+liminalAudio.loop = true;
+
+function liminal(){
+	// change content of the text in this box
+	musicImg.previousElementSibling.textContent = 'pov: you wanted to go to nagashima spa land but ended up here';
+	
+	musicImg.setAttribute('src', 'assets/liminal-space.jpg');
+	musicImg.setAttribute('alt', 'liminal space');
+	
+	toggleSound(liminalAudio);
+}
