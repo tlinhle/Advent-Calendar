@@ -16,17 +16,16 @@ function fadeOut(event){
 	}, delayInMilliseconds);
 }
 
-/*
 // hides sections  
 const section = document.querySelectorAll('section');
-for(let i = 0; i < section.length; i++){
+for(let i = 1; i < section.length; i++){
 	section[i].querySelector('p').textContent = 'no peeking!';
 	
 	hideElement(section[i].querySelector('img'));
 	hideElement(section[i].querySelector('ul'));
 	hideElement(section[i].querySelector('span'));
 	hideElement(section[i].querySelector('details'));
-}*/
+}
 
 function hideElement(element){
 	// if the element is found
