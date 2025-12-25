@@ -18,7 +18,7 @@ function fadeOut(event){
 
 // hides sections  
 const section = document.querySelectorAll('section');
-for(let i = 1; i < section.length; i++){
+for(let i = 2; i < section.length; i++){
 	section[i].querySelector('p').textContent = 'no peeking!';
 	
 	hideElement(section[i].querySelector('img'));
