@@ -18,7 +18,7 @@ function fadeOut(event){
 
 // hides sections  
 const section = document.querySelectorAll('section');
-for(let i = 10; i < section.length; i++){
+for(let i = 11; i < section.length; i++){
 	section[i].querySelector('p').textContent = 'no peeking!';
 	
 	hideElement(section[i].querySelector('img'));
@@ -62,12 +62,14 @@ function phoneRings(){
 	phone.classList.toggle('ringing');
 }
 
+const audio = new Audio('assets/miss.m4a');
 const ringingInterval = setInterval(phoneRings, 200);
 phone.addEventListener('click', pickUp);
 
 // stops ringing and plays voice note
 function pickUp(){
 	clearInterval(ringingInterval);
+	toggleSound(audio);
 }
 
 // vinyl disc spinning 
@@ -101,4 +103,17 @@ function liminal(){
 	musicImg.setAttribute('alt', 'liminal space');
 	
 	toggleSound(liminalAudio);
+}
+
+// swap radio buttons
+const yesBtn = document.getElementById('yes');
+const noBtn = document.getElementById('no');
+
+const selectedRadio = document.querySelector('input[name="love"]:checked');
+selectedRadio.addEventListener('click', checkRadio);
+
+function checkRadio(){
+	if(selectedRadio && selectedRadio.id === 'no'){
+		selectedRadio.textContent = 'yes';
+	}
 }

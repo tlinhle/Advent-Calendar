@@ -93,6 +93,12 @@ img{
 #musicNote{
 	border-radius: 5px;
 }
+ul{
+	list-style: none;
+}
+li, input{
+	margin: 0;
+}
 @media(max-width:1100px){
 	main{
 		display: flex;
