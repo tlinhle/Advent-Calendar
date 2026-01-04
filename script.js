@@ -18,7 +18,7 @@ function fadeOut(event){
 
 // hides sections  
 const section = document.querySelectorAll('section');
-for(let i = 12; i < section.length; i++){
+for(let i = 13; i < section.length; i++){
 	section[i].querySelector('p').textContent = 'no peeking!';
 	
 	hideElement(section[i].querySelector('img'));
@@ -105,15 +105,26 @@ function liminal(){
 	toggleSound(liminalAudio);
 }
 
-// swap radio buttons
-const yesBtn = document.getElementById('yes');
-const noBtn = document.getElementById('no');
+// swap radio labels
+const radios = document.querySelectorAll('input[name="love"]');
 
-const selectedRadio = document.querySelector('input[name="love"]:checked');
-selectedRadio.addEventListener('click', checkRadio);
+for(let i = 0; i < radios.length; i++){
+	radios[i].addEventListener('change', checkRadio);
+}
 
-function checkRadio(){
-	if(selectedRadio && selectedRadio.id === 'no'){
-		selectedRadio.textContent = 'yes';
+function checkRadio(event){
+	const selectedInput = event.target;
+	const selectedLabel = document.querySelector('label[for="' + selectedInput.id + '"]');
+	
+	if(selectedLabel.textContent === 'no'){
+		const yesLabel = document.querySelector('label[for="yes"]');
+		const noLabel = document.querySelector('label[for="no"]');
+		
+		const temp = yesLabel.textContent;
+		yesLabel.textContent = noLabel.textContent;
+		noLabel.textContent = temp;
 	}
+	
+	const para = document.getElementById('lovePara');
+	para.textContent = 'awww i love you more <3';
 }
