@@ -18,7 +18,7 @@ function fadeOut(event){
 
 // hides sections  
 const section = document.querySelectorAll('section');
-for(let i = 13; i < section.length; i++){
+for(let i = 14; i < section.length; i++){
 	section[i].querySelector('p').textContent = 'no peeking!';
 	
 	hideElement(section[i].querySelector('img'));
@@ -127,4 +127,12 @@ function checkRadio(event){
 	
 	const para = document.getElementById('lovePara');
 	para.textContent = 'awww i love you more <3';
+}
+
+// click for hug
+const hugImage = document.getElementById('hug');
+hugImage.addEventListener('click', changeHugImg);
+
+function changeHugImg(){
+	hugImage.setAttribute('src', 'assets/hug1.png');
 }

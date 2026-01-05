@@ -47,13 +47,13 @@ header h1, .box p{
 	font-size: 50px;
 	transition: all 0.2s ease;
 }
-.box:hover, #kissImage:hover, #phone:hover, summary:hover, #musicNote:hover{
+.box:hover, #kissImage:hover, #phone:hover, summary:hover, #musicNote:hover, #hug:hover{
 	cursor: pointer;
 }
 .box:hover{
 	background-color: #780000;
 }
-#kissImage:hover, #coupon:hover{
+#kissImage:hover, #coupon:hover, #hug:hover{
 	transform: scale(1.05);
 }
 ul{
